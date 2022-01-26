@@ -10,8 +10,9 @@
     <script>
     function time() {
       var currentdate = new Date();
+      var month = currentdate.getMonth() + 1;
       var timenow = + currentdate.getFullYear() + "年"
-            + currentdate.getMonth()+ 1 + "月"
+            + month + "月"
             + currentdate.getDate() + "日"
             + currentdate.getHours() + "時"
             + currentdate.getMinutes() + "分"
