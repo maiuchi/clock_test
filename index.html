@@ -19,9 +19,10 @@
             + currentdate.getMinutes() + "分"
             + currentdate.getSeconds() + "秒"
       var hours = currentdate.getHours()
-      var message = hours < 12 ? "おはようございます、朝です。": hours < 18 ? "こんにちは、お昼です。" : hours > 0 && hours < 6 ? "夜中です。おやすみなさい。": "こんばんは、夜です。"
+      var greet = hours < 12 ? "おはようございます、": hours < 18 ? "こんにちは、" : hours > 0 && hours < 6 ? "おやすみなさい、": "こんばんは、"
+      var day_nt = hours < 12 ? "朝です。": hours < 18 ? "お昼です。" : hours > 0 && hours < 6 ? "夜中です。": "夜です。"
 
-  document.getElementById("datebtn").innerHTML = "今は、" +  timenow　+"です。"  +"<br>" + message;
+  document.getElementById("datebtn").innerHTML = "今は、" + "<br>" +  timenow　+ "<br>" + "です。"  +"<br>" + greet + "<br>" + day_nt;
 
   }
     </script>
