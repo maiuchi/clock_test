@@ -16,7 +16,11 @@
             + currentdate.getHours() + "時"
             + currentdate.getMinutes() + "分"
             + currentdate.getSeconds() + "秒"
-  document.getElementById("datebtn").innerHTML = "今は、" + timenow　+"です。";
+      var hours = currentdate.getHours()
+      var message = hours < 12 ? "おはようございます、朝です。": hours < 18 ? "こんにちは、お昼です。" : hours < 0 && hours > 6 ? "夜中です。おやすみなさい。": "こんばんは、夜です。"
+
+  document.getElementById("datebtn").innerHTML = "今は、" + timenow　+"です。" + message;
+
   }
     </script>
 
