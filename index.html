@@ -1,0 +1,27 @@
+<html lang="ja">
+
+<head>
+  <meta charset = "UTF-8">
+  <title>今何時？</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <script>
+    function time() {
+      var currentdate = new Date();
+      var timenow = + currentdate.getFullYear() + "年"
+            + currentdate.getMonth()+ 1 + "月"
+            + currentdate.getDate() + "日"
+            + currentdate.getHours() + "時"
+            + currentdate.getMinutes() + "分"
+            + currentdate.getSeconds() + "秒"
+  document.getElementById("datebtn").innerHTML = "今は、" + timenow　+"です。";
+  }
+    </script>
+
+  <p id="datebtn">今は</p>
+
+  <button type="button" onclick="time()">何時だっけ？</button>
+</body>
+</html>
