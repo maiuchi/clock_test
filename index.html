@@ -19,8 +19,8 @@
             + currentdate.getMinutes() + "分"
             + currentdate.getSeconds() + "秒"
       var hours = currentdate.getHours()
-      var greet = hours < 12 && hours > 6 ? "おはようございます、": hours < 18 && hours > 11 ? "こんにちは、" : hours >= 0 && hours < 6 ? "おやすみなさい、": "こんばんは、"
-      var day_nt = hours < 12 && hours > 6? "朝です。": hours < 18 && hours > 11 ? "お昼です。" : hours >= 0 && hours < 6 ? "夜中です。": "夜です。"
+      var greet = hours < 12 && hours >= 6 ? "おはようございます、": hours < 18 && hours > 11 ? "こんにちは、" : hours >= 0 && hours < 6 ? "おやすみなさい、": "こんばんは、"
+      var day_nt = hours < 12 && hours >= 6? "朝です。": hours < 18 && hours > 11 ? "お昼です。" : hours >= 0 && hours < 6 ? "夜中です。": "夜です。"
 
   document.getElementById("datebtn").innerHTML = "今は、" + "<br>" +  timenow　+ "<br>" + "です。"  +"<br>" + greet + "<br>" + day_nt;
 
